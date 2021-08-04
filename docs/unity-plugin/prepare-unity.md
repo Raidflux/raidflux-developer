@@ -12,4 +12,3 @@ Raidflux only supports gameservers build for linux. Unity supports compiling for
 Select Linux Build Support (Mono) as shown below and continue through the steps to install the module.
 
 ![add linux](./assets/add-linux.png)
-
