@@ -39,4 +39,4 @@ If done correctly, your build folder looks somewhat like this (your Linux build 
 
 Select everything in the folder and **compress** it into a **.ZIP** file.
 
-You're done here, continue at [Uploading your build](../../uploading-your-build)
+You're done here, continue at [Uploading your build](#)
