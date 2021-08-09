@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Server side implementation 
+# Integrating the server side 
 :::important
 Raidflux **ONLY** works with Linux game server builds!  
 Don't worry the game itself can be build for any target!   

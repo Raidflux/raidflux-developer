@@ -49,4 +49,4 @@ Select everything in the folder and **compress** it into a **.zip** file.
 :::caution
 Make sure you've compressed it into a **.zip** file, other archive types can't be uploaded to Raidflux!
 :::
-You're done here, if you've already created a team continue at [Uploading your build](./../../raidflux-console/builds#uploading-your-build) else continue at [Teams](./../../raidflux-console/teams)
+You're done here, if you've already created a team continue at [Uploading your build](./../../raidflux-console/builds#uploading-your-build) else continue at [Teams](./../account-teams)

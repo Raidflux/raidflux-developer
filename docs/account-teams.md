@@ -7,7 +7,6 @@ sidebar_position: 2
 ## Accessing your account
 Because Raidflux is currently **invite only**, you will first have to receive an email from us containing your personal invitation. Once you receive this invitation, use the button in the invitation email to register an account.
 
-![mail team invite](./assets/mail-team-invite.png)
 
 After you created an account, Accept the invitation to your team using the green check button as shown below
 

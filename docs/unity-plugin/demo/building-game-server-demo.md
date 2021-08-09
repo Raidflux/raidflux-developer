@@ -23,8 +23,9 @@ If the *Server build checkbox* is visible make sure it’s **checked** if it isn
 **Create** a text file in the root of your build and change the name to "**gameserver**" and the file extension to "**.ini**".  
 
 **Open** the gameserver.ini with a text editor and paste in the following lines:
-```
-[ports.udp] -: 7777
+```ini
+[ports.udp] 
+-: 7777
 
 [entrypoint]
 entrypoint = name_of_game_server_build.x86_64
@@ -40,8 +41,8 @@ Make sure the text behind ***entrypoint =*** is exactly the same as the name of 
 If done correctly, your build folder looks somewhat like this (your Linux build might have a different name):
 ![build-folder](./assets/build-folder.png)  
 
-Select everything in the folder and **compress** it into a **.ZIP** file.
+Select everything in the folder and **compress** it into a **.zip** file.
 :::caution
-Make sure you've compressed it into a **.ZIP** file, other archive types can't be uploaded to Raidflux!
+Make sure you've compressed it into a **.zip** file, other archive types can't be uploaded to Raidflux!
 :::
-You're done here, if you've already created a team continue at [Uploading your build](./../../raidflux-console/builds#uploading-your-build) else continue at [Teams](./../../raidflux-console/teams)
+You're done here, if you've already created a team continue at [Uploading your build](./../../raidflux-console/builds#uploading-your-build) else continue at [Teams](./../../account-teams)

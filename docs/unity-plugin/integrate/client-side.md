@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 ---
-# Client side implementation
+# Integrating the client side
 :::important
 Raidflux **ONLY** works with Linux game server builds! Don't worry the game itself can be build for any target!   
 If you're not on Linux make sure you've added **Linux Build Support (Mono)** to your Unity version!  
