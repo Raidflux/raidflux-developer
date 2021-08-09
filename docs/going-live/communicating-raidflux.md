@@ -14,9 +14,9 @@ We will use the ID of your deployment to let your game discover motherships and 
 
 ### Choose your integration method below:  
 **Unity:**  
-[Discovery - Unity: own project ](./)  
-[Discovery - Unity: demo project](./)  
+[Discovery - Unity: own project ](../going-live/with-unity#discover---unity:-demo-project)  
+[Discovery - Unity: demo project](../going-live/with-unity#discover---unity:-own-project)  
 
 **Unreal Engine:**  
-[Discovery - UE4: own project](./)  
-[Discovery - UE4: demo project](./)  
+[Discovery - UE4: own project](../going-live/with-ue4)  
+[Discovery - UE4: demo project](../going-live/with-ue4)  

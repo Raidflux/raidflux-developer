@@ -32,6 +32,6 @@ If everything was done correctly but it's not working, feel free to contact us a
 
 
 ## Discovery - Unity: own project
-After you've copied the deployment ID from your **active** deployment, go to where you implemented the `RaidfluxServer.Singleton.ListMotherships(string deploymentID, Action<List<Mothership>> onComplete)` function from [Integrating the client side](../unity-plugin\integrate\client-side.md) and paste it in the expected string field to be done!
+After you've copied the deployment ID from your **active** deployment, go to where you implemented the `RaidfluxServer.Singleton.ListMotherships(string deploymentID, Action<List<Mothership>> onComplete)` function from [Integrating the client side](../unity-plugin\integrate\client-side.md) and pass in the Deployment ID.
 
 **You're ready to enjoy your game now!**
