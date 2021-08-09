@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Build target setup 
+# Building your game server 
 
 :::important
 Raidflux **ONLY** works with Linux game server builds!  
@@ -10,10 +10,13 @@ Don't worry the game itself can be build for any target!
 If you're not on Linux make sure you've added **Linux Build Support (Mono)** to your Unity version!  
 Want to know how to add Linux Build Support? go [here](../preparing-unity.md)!
 :::
-
+:::caution
+This page is for building a game server when you're using our demo project!  
+If you're integrating Raidflux into your own project go [here](../integrate/building-game-server-integrate)
+:::
 
 Go to **File** -> **Build settings** and select **Linux** as build target.
-If the “Server build” checkbox is visible make sure it’s **checked** if it isn’t visible ignore it.  
+If the *Server build checkbox* is visible make sure it’s **checked** if it isn’t visible ignore it.  
 ![build-target-linux](./assets/build-target-linux.png)  
 **Build** the server and locate the build directory.  
 
@@ -38,5 +41,7 @@ If done correctly, your build folder looks somewhat like this (your Linux build 
 ![build-folder](./assets/build-folder.png)  
 
 Select everything in the folder and **compress** it into a **.ZIP** file.
-
-You're done here, continue at [Uploading your build](../../uploading-your-build)
+:::caution
+Make sure you've compressed it into a **.ZIP** file, other archive types can't be uploaded to Raidflux!
+:::
+You're done here, if you've already created a team continue at [Uploading your build](./../../raidflux-console/builds#uploading-your-build) else continue at [Teams](./../../raidflux-console/teams)

@@ -2,10 +2,10 @@
 sidebar_position: 2
 ---
 
-# Setting up your project
+# Setting up a project
 
 
-You can download our example project with the Raidflux-Unity plugin pre-installed: [Demo project](https://github.com/Raidflux/raidflux-unity-demo)  
+You can download our example project with the Raidflux-Unity plugin pre-installed: [Demo project download](https://github.com/Raidflux/raidflux-unity-demo)  
 and continue to [Preparing the demo project](demo/prepare-demo).
 
 #### OR 

@@ -2,14 +2,14 @@
 sidebar_position: 1
 ---
 
-# Server side Implementation 
+# Server side implementation 
 :::important
 Raidflux **ONLY** works with Linux game server builds!  
 Don't worry the game itself can be build for any target!   
 If you're not on Linux make sure you've added **Linux Build Support (Mono)** to your Unity version!  
 Want to know how to add Linux Build Support? go [here](../preparing-unity.md)!
 :::
-Start by downloading our [Unity SDK](https://drive.google.com/file/d/1LL7jPhPj3YCJxCeinv2I_uUItZyqelDF/view) and save the plugin to your preferred location. 
+Start by downloading our [Unity Plugin](https://drive.google.com/file/d/1LL7jPhPj3YCJxCeinv2I_uUItZyqelDF/view) and save the plugin to your preferred location. 
 
 Inside Unity go to **Assets** -> **Import Package** -> **Custom package** and locate the plugin.
 ![unity-package](./assets/import-sdk.png)
@@ -46,5 +46,5 @@ private void UpdatePlayerCount(ulong id)
 ```
 An example implementation using Unity’s new MLAPI can be found [here](https://github.com/Raidflux/raidflux-unity-demo/blob/main/Assets/Scripts/Main/NetworkController.cs).  
 
-When you get this to work you've already finished the server side of your game server!  
-Let's continue at the [Client side implementation](./client-side)
+Now you got this to work you've already finished the server side infrastructure of your game!  
+Let's continue at the [Client side implementation](./client-side)!
