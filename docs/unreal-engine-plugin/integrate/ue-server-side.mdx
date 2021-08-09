@@ -1,0 +1,85 @@
+---
+sidebar_position: 2
+---
+
+# Integrating the server side
+
+:::important
+Make sure to only call the serverside functions on the server by checking [```IsDedicatedServer```](https://docs.unrealengine.com/4.26/en-US/API/Runtime/Engine/Kismet/UKismetSystemLibrary/IsDedicatedServer/) function.
+:::
+
+For the server side of Raidflux there are 2 functions that need to be called. The Raidflux plugin is integrated as a subsystem and is accessible wherever you have access to the ```UGameInstance```. 
+
+import {UETabs, CPPTab, BPTab} from "@site/src/components/CustomTabs/UETabs.js"
+
+<UETabs>
+  <CPPTab>
+{`#include "Raidflux.h"
+...  
+URaidflux::GetInstance(GetGameInstance());`}
+  </CPPTab>
+  <BPTab>
+    <img src={require('./assets/raidflux-subsystem-node.png').default} alt="subsystem node"/>
+  </BPTab>
+</UETabs>
+
+Whenever you start listening for incoming connections, you will need to call the ```URaidflux::Init``` function.
+
+:::tip
+In our demo project and we simply call the ```URaidflux::Init``` function in the ```BeginPlay``` event.
+:::
+
+:::important
+You might see some cUrl errors in the output log, this is normal. This is because the init and report API's are only available when deployed in Raidflux's infrastructure.
+:::
+
+<UETabs>
+  <CPPTab>
+{`void ARaidfluxDemoGameMode::BeginPlay()
+{
+	Super::BeginPlay();
+   
+	if (UKismetSystemLibrary::IsDedicatedServer(GetWorld())) {
+		FRaidfluxOnCompleted onCompletedInit;
+		URaidflux::GetInstance(GetGameInstance())->Init(this->maxPlayers, onCompletedInit);
+		onCompletedInit.BindDynamic(this, &ARaidfluxDemoGameMode::OnRaidfluxInitialized);
+	}
+	...
+}`}
+  </CPPTab>
+  <BPTab>
+    <img src={require('./assets/initialize-raidflux.png').default} alt="init raidflux"/>
+  </BPTab>
+</UETabs>
+
+After initializing Raidflux, you will have to update the player count of your server every time a player joins or leaves. We accomplished this in our demo game by implementing the ```AGameMode::PostLogin``` and ```AGameMode::Logout``` events and passing the value of ```AGameMode::GetNumPlayers```.
+
+<UETabs>
+  <CPPTab>
+{`void ARaidfluxDemoGameMode::PostLogin(APlayerController* NewPlayer)
+{
+	Super::PostLogin(NewPlayer)
+ 
+	if (UKismetSystemLibrary::IsDedicatedServer(GetWorld())) {
+		FRaidfluxOnCompleted onCompletedReport;
+		URaidflux::GetInstance(GetGameInstance())->ReportPlayerCount(GetNumPlayers(), this->maxPlayers, onCompletedReport);
+		onCompletedReport.BindDynamic(this, &ARaidfluxDemoGameMode::OnPlayerCountReported);
+	}
+}
+ 
+void ARaidfluxDemoGameMode::Logout(AController* Exiting)
+{
+	Super::Logout(Exiting)
+ 
+	if (UKismetSystemLibrary::IsDedicatedServer(GetWorld())) {
+		FRaidfluxOnCompleted onCompletedReport;
+		// Subtract 1 player because it has not been removed from the player controller list yet (it will be next frame).
+		URaidflux::GetInstance(GetGameInstance())->ReportPlayerCount(GetNumPlayers() - 1, this->maxPlayers, onCompletedReport);
+		onCompletedReport.BindDynamic(this, &ARaidfluxDemoGameMode::OnPlayerCountReported);
+	}
+}`}
+  </CPPTab>
+  <BPTab>
+    <img src={require('./assets/report-count.png').default} alt="report player count"/>
+  </BPTab>
+</UETabs>

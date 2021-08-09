@@ -1,0 +1,69 @@
+---
+sidebar_position: 3
+---
+
+# Integrating the client side
+
+import {UETabs, CPPTab, BPTab} from "@site/src/components/CustomTabs/UETabs.js"
+
+For the client side of Raidflux there are 2 functions that need to be called. The Raidflux plugin is integrated as a subsystem and is accessible wherever you have access to the ```UGameInstance```.
+
+<UETabs>
+  <CPPTab>
+{`#include "Raidflux.h"
+...  
+URaidflux::GetInstance(GetGameInstance());`}
+  </CPPTab>
+  <BPTab>
+    <img src={require('./assets/raidflux-subsystem-node.png').default} alt="subsystem node"/>
+  </BPTab>
+</UETabs>
+
+To get a list of regions (Motherships) sorted based on distance to the user you can use the ```URadflux::FetchMotherships(const FString& deploymentID, const FRaidfluxOnMothershipsFetched& onCompletedCallback)``` function as shown below:
+
+<UETabs>
+  <CPPTab>
+{`void ARaidfluxDemoGameMode::RefreshMotherships()
+{
+	FRaidfluxOnMothershipsFetched onMothershipsFetched;
+	URaidflux::GetInstance(GetGameInstance())->FetchMotherships(this->deploymentID, onMothershipsFetched);
+	onMothershipsFetched.BindDynamic(this, &ARaidfluxDemoGameMode::OnMothershipsFetched);
+}
+ 
+void ARaidfluxDemoGameMode::OnMothershipsFetched(const TArray<FMothership>& motherships) {
+	...
+}`}
+  </CPPTab>
+  <BPTab>
+    <img src={require('./assets/fetch-motherships.png').default} alt="fetch motherships"/>
+  </BPTab>
+</UETabs>
+
+Once you have a mothership, you can list its gameservers by using the ```FetchGameservers(const FString& mothershipID, const FRaidfluxOnGameserversFetched& onCompletedCallback)``` function as shown below:
+
+<UETabs>
+  <CPPTab>
+{`void ARaidfluxDemoGameMode::RefreshGameservers(const FString& mothershipID)
+{
+	FRaidfluxOnGameserversFetched onGameserversFetched;
+	URaidflux::GetInstance(GetGameInstance())->FetchGameservers(mothershipID, onGameserversFetched);
+	onGameserversFetched.BindDynamic(this, &ARaidfluxDemoGameMode::OnGameserversFetched);
+}
+ 
+void ARaidfluxDemoGameMode::OnGameserversFetched(const TArray<FGameserver>& gameservers) {
+	...
+}`}
+  </CPPTab>
+  <BPTab>
+    <img src={require('./assets/fetch-gameservers.png').default} alt="fetch gameservers"/>
+  </BPTab>
+</UETabs>
+
+From here on you can use the gameservers array to connect to an available gameserver.
+
+An example implementation of our plugin can be found in our demo project:
+https://github.com/Raidflux/raidflux-unreal-engine-demo
+
+That's all for now! Please continue at [Building your server](../build) 
+
+
