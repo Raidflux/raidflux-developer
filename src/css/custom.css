@@ -27,3 +27,11 @@
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+.medium-zoom-overlay {
+  background-color: var(--ifm-background-surface-color) !important;
+}
+
+.markdown img {
+  border-radius: 12px;
+}
