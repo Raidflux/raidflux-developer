@@ -21,7 +21,7 @@ If you want join the server, simply **press play** in unity and look for the act
 ![server-found](./assets/server-found.png)
 
 :::important
-If you don't see the mothership or server yet might still be spinning up!  
+If you don't see the mothership or gameserver yet, it might still be spinning up!  
 If a mothership or game server don't show up after 5 minutes try to retrace your steps and see if something went wrong.   
 :::
 :::tip
@@ -32,6 +32,6 @@ If everything was done correctly but it's not working, feel free to contact us a
 
 
 ## Discovery - Unity: own project
-After you've copied the deployment ID from your **active** deployment, go to where you implemented the `RaidfluxServer.Singleton.ListMotherships(string deploymentID, Action<List<Mothership>> onComplete)` function from [Integrating the client side](../unity-plugin\integrate\client-side.md) and pass in the Deployment ID.
+After you've copied the deployment ID from your **active** deployment, go to where you implemented the `RaidfluxServer.Singleton.ListMotherships(string deploymentID, Action<List<Mothership>> onComplete)` function from [Integrating the client side](../unity-plugin/integrate/client-side) and pass it in the expected string parameter!
 
 **You're ready to enjoy your game now!**
