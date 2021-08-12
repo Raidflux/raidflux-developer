@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+slug: /discovering-raidflux-with-unity3d
 ---
 
 # Discovery with Unity

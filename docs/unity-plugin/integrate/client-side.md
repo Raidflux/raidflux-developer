@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+slug: /client-side
 ---
 # Integrating the client side
 :::important

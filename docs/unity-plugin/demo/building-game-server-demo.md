@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+slug: /building-game-server
 ---
 
 # Building your game server 

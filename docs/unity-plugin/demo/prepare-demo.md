@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+slug: /preparing-the-demo
 ---
 
 # Preparing the demo project
