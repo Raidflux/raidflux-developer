@@ -1,6 +1,5 @@
 ---
 sidebar_position: 3
-slug: /discovering-raidflux-with-ue4
 ---
 
 # Discovery with Unreal Engine 4

@@ -1,6 +1,5 @@
 ---
 sidebar_position: 5
-slug: /building-a-server-ue4
 ---
 
 # Building your server

@@ -1,6 +1,5 @@
 ---
 sidebar_position: 5
-slug: /adding-billing-profiles
 ---
 
 # Billing profiles

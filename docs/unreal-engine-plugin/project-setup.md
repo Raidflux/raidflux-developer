@@ -1,6 +1,5 @@
 ---
 sidebar_position: 2
-slug: /choosing-a-project
 ---
 
 # Setting up your project

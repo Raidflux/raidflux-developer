@@ -1,6 +1,5 @@
 ---
 sidebar_position: 2
-slug: /Setting-a-project
 ---
 
 # Setting up a project

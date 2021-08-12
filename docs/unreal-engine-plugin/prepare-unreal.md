@@ -1,6 +1,5 @@
 ---
 sidebar_position: 1
-slug: /preparing-ue4
 ---
 
 # Preparing Unreal Engine

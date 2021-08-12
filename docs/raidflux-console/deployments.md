@@ -1,6 +1,5 @@
 ---
 sidebar_position: 4
-slug: /creating-a-deployment
 ---
 
 # Creating a deployment

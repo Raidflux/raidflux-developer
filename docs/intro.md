@@ -24,7 +24,7 @@ You can find all the documentation you need to get Raidflux integrated in your g
 **Region** - A central location (e.g. Amsterdam) and it's connect radius.  
 **Deployment** - The place the user determines what build goes live using a specific Region plan.  
 **Billing Profile** - Payment profile to assign to a team.  
-:::important
+:::importanty
 **Mothership** - A Virtual Machine running Raidflux software that orchestrates a region and its fleetships.  
 **Fleetship** - Virtual Machine hosting one or more game servers.  
 **Seats** - The amount of open spots for players to join in a game server.  

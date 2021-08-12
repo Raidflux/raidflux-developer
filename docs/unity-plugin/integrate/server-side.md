@@ -1,6 +1,5 @@
 ---
 sidebar_position: 1
-slug: /server-side
 ---
 
 # Integrating the server side 

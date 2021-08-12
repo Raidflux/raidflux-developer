@@ -1,6 +1,5 @@
 ---
 sidebar_position: 6
-slug: /building-game-server
 ---
 
 # Building your integrated game server
