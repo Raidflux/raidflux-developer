@@ -9,7 +9,8 @@ slug: /
 
 Raidflux is an auto-scaling multiplayer game server hosting platform. 
 That's focussed on providing  
-auto-scaled multiplayer game-server infrastructures to game developers of any size or budget. We do this by providing a web-based interface that allows you to set up your infrastructure in a matter of minutes! 
+auto-scaled multiplayer game-server infrastructures to game developers of any size or budget.  
+We do this by providing a web-based interface that allows you to set up your infrastructure in a matter of minutes! 
 
 Here you can find all the documentation you need to get Raidflux integrated in your game!
 
