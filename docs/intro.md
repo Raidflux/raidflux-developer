@@ -40,4 +40,7 @@ We currently have support for **Unreal Engine** and **Unity**.
 Support for **Godot** and other platforms/languages will get developed when there's a demand for it.
 
 ## Getting Started
-TODO
+Click your game engine below to start!  
+
+[Unity 3D](./unity-plugin/preparing-unity)  
+[Unreal Engine 4](./unreal-engine-plugin/prepare-unreal)
