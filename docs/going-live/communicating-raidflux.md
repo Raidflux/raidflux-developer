@@ -3,20 +3,20 @@ sidebar_position: 1
 ---
 
 # Communicating with Raidflux
-When you've setup your game, created a deployment, assigned a billing profile, and  
-enabled your deployment you're almost ready to start playing your game!
+When you've uploaded your game, assigned a billing profile, created and enabled a deployment you're almost ready to start playing your game!
  
-Raidflux takes up to 5 minutes to spin up your servers after enabling a deployment. In the meantime , **copy the ID** of a deployment you've created by clicking on the text.
+While the deployment is spinning up we can make sure the communication between your game and Raidflux can be established.  
+**Copy the ID** of a deployment you've created by clicking on the text.
 ![uuid-copy](../raidflux-console/assets/copy-uuid.png)
 
-
-We will use the ID of your deployment to let your game discover motherships and the game servers that Raidflux has deployed.  
+We will use the ID of your deployment to let your game discover motherships and the game servers  
+that Raidflux launched when your deployment got enabled!  
 
 ### Choose your integration method below:  
 **Unity:**  
-[Discovery - Unity: own project ](../going-live/with-unity#discover---unity:-demo-project)  
-[Discovery - Unity: demo project](../going-live/with-unity#discover---unity:-own-project)  
+[Discovery - Unity: own project ](../going-live/with-unity#discovery---unity-own-project)  
+[Discovery - Unity: demo project](../going-live/with-unity#discovery---unity-demo-project)  
 
 **Unreal Engine:**  
 [Discovery - UE4: own project](../going-live/with-ue4)  
-[Discovery - UE4: demo project](../going-live/with-ue4)  
+[Discovery - UE4: demo project](../going-live/with-ue4)
